@@ -1,6 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpModule } from "@angular/http";
 
 import { AppComponent } from "./app.component";
 import { FavoriteComponent } from "./components/favorite/favorite.component";
@@ -12,6 +13,7 @@ import { CourseFormComponent } from "./components/course-form/course-form.compon
 import { SignupFormComponent } from "./components/signup-form/signup-form/signup-form.component";
 import { NewCourseFormComponent } from "./components/new-course-form/new-course-form.component";
 import { ChangePasswordComponent } from "./components/change-password/change-password.component";
+import { PostsComponent } from "./components/posts/posts.component";
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import { ChangePasswordComponent } from "./components/change-password/change-pas
     ContactFormComponent,
     CourseFormComponent,
     NewCourseFormComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    PostsComponent
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpModule],
   providers: [],
   bootstrap: [AppComponent]
 })
