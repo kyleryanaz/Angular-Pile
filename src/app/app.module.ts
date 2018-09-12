@@ -10,6 +10,7 @@ import { ZippyComponent } from "./components/zippy/zippy.component";
 import { ContactFormComponent } from "./components/contact-form/contact-form.component";
 import { CourseFormComponent } from "./components/course-form/course-form.component";
 import { SignupFormComponent } from "./components/signup-form/signup-form/signup-form.component";
+import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SignupFormComponent } from "./components/signup-form/signup-form/signup
     InputFormatDirective,
     ZippyComponent,
     ContactFormComponent,
-    CourseFormComponent
+    CourseFormComponent,
+    NewCourseFormComponent
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],
