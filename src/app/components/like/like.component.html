@@ -1,0 +1,2 @@
+<button type="button" class="btn" [class.btn-light]="!isActive" [class.btn-primary]="isActive" (click)="onClick($event)">Like</button><span
+  class="mx-3">{{likesCount}}</span>
