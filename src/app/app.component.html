@@ -1,9 +1,17 @@
-<h4>
-  Favorite Component</h4>
+<hr>
+<!-- Section 4 -->
+<h2 class="sectionHeader">Data & Events</h2>
+<hr>
+
+<h4>Favorite Component</h4>
 <favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)">
 </favorite>
 
 <hr>
+<!-- Section 5 -->
+<h2 class="sectionHeader">Re-usable Components</h2>
+<hr>
+
 
 <h4>Like Component</h4>
 <like [likesCount]="tweet.likesCount" [isActive]="tweet.isLiked" (change)="onTweetChanged($event)"></like>
@@ -13,6 +21,9 @@
 <h4>Input Fromat</h4>
 <input type="text" [appInputFormat]="'uppercase'">
 
+<hr>
+<!-- Section 6 -->
+<h2 class="sectionHeader">Directives</h2>
 <hr>
 
 <h4>Zippy Component</h4>
@@ -24,6 +35,9 @@
 </zippy>
 
 <hr>
+<!-- Section 7 -->
+<h2 class="sectionHeader">Template Forms</h2>
+<hr>
 
 <h4>Contact Form</h4>
 <contact-form></contact-form>
@@ -33,6 +47,9 @@
 <h4>Course Form</h4>
 <course-form></course-form>
 
+<hr>
+<!-- Section 8 -->
+<h2 class="sectionHeader">Reactive Forms</h2>
 <hr>
 
 <h4>Signup Form - Validation</h4>
@@ -47,3 +64,11 @@
 
 <h4>Change Password Form</h4>
 <change-password></change-password>
+
+<hr>
+<!-- Section 9 -->
+<h2 class="sectionHeader">Section 9</h2>
+<hr>
+
+<h4>Http Service</h4>
+<posts></posts>
