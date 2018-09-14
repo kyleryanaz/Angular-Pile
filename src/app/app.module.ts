@@ -14,6 +14,7 @@ import { SignupFormComponent } from "./components/signup-form/signup-form/signup
 import { NewCourseFormComponent } from "./components/new-course-form/new-course-form.component";
 import { ChangePasswordComponent } from "./components/change-password/change-password.component";
 import { PostsComponent } from "./components/posts/posts.component";
+import { PostService } from "./services/post.service";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import { PostsComponent } from "./components/posts/posts.component";
     PostsComponent
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpModule],
-  providers: [],
+  providers: [
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
