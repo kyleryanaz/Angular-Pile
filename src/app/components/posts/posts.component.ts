@@ -51,14 +51,18 @@ export class PostsComponent implements OnInit {
   }
 
   deletePost(post) {
-    this.service.deletePost(post.id).subscribe(
+    this.service.deletePost(345).subscribe(
       response => {
         let index = this.posts.indexOf(post);
         this.posts.splice(index, 1);
       },
-      error => {
-        alert("An unexpected error occured.");
-        console.log(error);
+      (error: Response) => {
+        if (error.status === 404) {
+          alert("This post has already been deleted.");
+        } else {
+          alert("An unexpected error occured.");
+          console.log(error);
+        }
       }
     );
   }
