@@ -15,11 +15,12 @@ export class PostsComponent implements OnInit {
     this.service.getPosts().subscribe(
       response => {
         this.posts = response.json();
-      },
-      error => {
-        alert("An unexpected error occured.");
-        console.log(error);
       }
+      // ,
+      // error => {
+      //   alert("An unexpected error occured.");
+      //   console.log(error);
+      // }
     );
   }
 
@@ -47,11 +48,12 @@ export class PostsComponent implements OnInit {
     this.service.updatePost(post).subscribe(
       response => {
         console.log(response.json());
-      },
-      error => {
-        alert("An unexpected error occured.");
-        console.log(error);
       }
+      // ,
+      // error => {
+      //   alert("An unexpected error occured.");
+      //   console.log(error);
+      // }
     );
   }
 
@@ -67,8 +69,7 @@ export class PostsComponent implements OnInit {
         if (error.status === 404) {
           alert("This post has already been deleted.");
         } else {
-          alert("An unexpected error occured.");
-          console.log(error);
+          throw error;
         }
       }
     );

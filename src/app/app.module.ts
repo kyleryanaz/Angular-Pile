@@ -2,7 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
-
+import { ErrorHandler } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { FavoriteComponent } from "./components/favorite/favorite.component";
 import { LikeComponent } from "./components/like/like.component";
@@ -15,6 +15,7 @@ import { NewCourseFormComponent } from "./components/new-course-form/new-course-
 import { ChangePasswordComponent } from "./components/change-password/change-password.component";
 import { PostsComponent } from "./components/posts/posts.component";
 import { PostService } from "./services/post.service";
+import { AppErrorHandler } from "./common/app-error-handler";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { PostService } from "./services/post.service";
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpModule],
   providers: [
-    PostService
+    PostService,
+    // "Wherever you are using ErrorHandler, use this new class"
+    { provide: ErrorHandler, useClass: AppErrorHandler }
   ],
   bootstrap: [AppComponent]
 })
